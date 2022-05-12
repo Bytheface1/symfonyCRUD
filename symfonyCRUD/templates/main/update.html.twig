@@ -3,29 +3,34 @@
 {% block body %}
 <div class="container">
     <div class="row">
-        <h3 class="mt-5 mb-5 offset-md-3">Formulario Proveedor</h3>
+        <h3 class="mt-5 mb-5 offset-md-3">Editar Proveedor</h3>
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
         <div class="col-md-6 offset-md-3">
-        <a class="btn btn-primary mb-1" href="{{ path('main') }}">Inicio</a>
+            <a class="btn btn-primary mb-1" href="{{ path('main') }}">Inicio</a>
             {{ form_start(form) }}
                 <div class="form-group">
-                    {{ form_label(form.nombre) }}
-                    {{ form_widget(form.nombre,{'attr':{'class':'form-control'}}) }}
+                    {{ form_label(form.nombre)}}
+                    {{ form_widget(form.nombre,{'attr':{'class':'form-control'}})}}
                 </div>
                 <div class="form-group">
-                    {{ form_label(form.correo) }}
-                    {{ form_widget(form.correo,{'attr':{'class':'form-control'}}) }}
+                    {{ form_label(form.correo)}}
+                    {{ form_widget(form.correo,{'attr':{'class':'form-control'}})}}
                 </div>
                 <div class="form-group">
-                    {{ form_label(form.telefono) }}
-                    {{ form_widget(form.telefono,{'attr':{'class':'form-control'}}) }}
+                    {{ form_label(form.telefono)}}
+                    {{ form_widget(form.telefono,{'attr':{'class':'form-control'}})}}
                 </div>
                 <div class="form-group">
                     {{ form_label(form.tipo)}}
                     {{ form_widget(form.tipo,{'attr':{'class':'form-control'}})}}
                 </div>
                 <div class="form-group">
-                    {{ form_label(form.activo) }}
-                    {{ form_widget(form.activo,{'attr':{'class':'CheckboxType'}}) }}
+                    {{ form_label(form.activo)}}
+                    {{ form_widget(form.activo,{'attr':{'class':'CheckboxType'}})}}
                 </div>
                 <div class="form-group">
                     <button class="btn btn-info mt-2 text-white">Guardar</button>
