@@ -39,24 +39,7 @@ class CrudRepository extends ServiceEntityRepository
         }
     }
 
-// /**
-//      * @return Crud[]
-//      */
-//     public function findAllCrud(): array
-//     {
-//         $entityManager = $this->getEntityManager();
-
-//         $query = $entityManager->createQuery(
-//             'SELECT c
-//             FROM App\Entity\Crud c
-//             ORDER BY c.id ASC'
-//         );
-
-//         // returns an array of Product objects
-//         return $query->getResult();
-//     }
-
-    //    /**
+//    /**
 //     * @return Crud[] Returns an array of Crud objects
 //     */
 //    public function findByExampleField($value): array
